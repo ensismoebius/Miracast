@@ -1,0 +1,41 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+# Maintainer: André Furlan <ensismoebius@gmail.com>
+pkgname=miracast-git
+_name=Miracast
+pkgver=r6.1cdeb31
+pkgrel=1
+pkgdesc='Miracast (Wi-Fi Display) source and sink for Linux, over the network (MS-MICE) or Wi-Fi Direct'
+arch=('x86_64' 'aarch64')
+url='https://github.com/ensismoebius/Miracast'
+license=('GPL-2.0-or-later')
+depends=('gstreamer' 'gst-plugins-base' 'gst-plugins-good' 'gst-plugins-bad'
+         'gst-plugins-ugly' 'gst-libav' 'gst-plugin-va' 'gst-plugin-pipewire'
+         'pipewire' 'glib2')
+makedepends=('cmake' 'git')
+optdepends=('dnsmasq: DHCP server when acting as a Wi-Fi Direct sink'
+            'wpa_supplicant: Wi-Fi Direct (needs a P2P-capable adapter)'
+            'iproute2: group addressing for Wi-Fi Direct')
+provides=('miracast')
+conflicts=('miracast')
+# Build from another repository (e.g. a local checkout) with MIRACAST_REPO=file:///path
+source=("${_name}::git+${MIRACAST_REPO:-${url}.git}")
+sha256sums=('SKIP')
+
+pkgver() {
+	cd "${srcdir}/${_name}"
+	printf 'r%s.%s' "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+	cmake -S "${srcdir}/${_name}" -B build -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+	cmake --build build
+}
+
+check() {
+	ctest --test-dir build --output-on-failure
+}
+
+package() {
+	DESTDIR="${pkgdir}" cmake --install build
+	install -Dm644 "${srcdir}/${_name}/LICENSE" "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}

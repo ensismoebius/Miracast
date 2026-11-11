@@ -1,0 +1,25 @@
+Source: miracast
+Section: video
+Priority: optional
+Maintainer: André Furlan <ensismoebius@gmail.com>
+Build-Depends: debhelper-compat (= 13), cmake (>= 3.16), pkg-config, g++,
+ libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, libglib2.0-dev
+Standards-Version: 4.6.2
+Homepage: https://github.com/ensismoebius/Miracast
+Rules-Requires-Root: no
+
+Package: miracast
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ gstreamer1.0-plugins-base, gstreamer1.0-plugins-good,
+ gstreamer1.0-plugins-bad, gstreamer1.0-plugins-ugly,
+ gstreamer1.0-libav, gstreamer1.0-pipewire
+Recommends: iproute2
+Suggests: dnsmasq, wpasupplicant
+Description: Miracast (Wi-Fi Display) source and sink for the command line
+ Sends the screen and the system audio to a Miracast receiver such as a smart
+ TV, or receives and displays a Miracast stream. Works over the existing IP
+ network (Miracast over Infrastructure, MS-MICE) with automatic discovery by
+ mDNS, or over Wi-Fi Direct when the adapter supports it. Video is H.264
+ (CPU or GPU encoder), audio is AAC-LC, carried in MPEG-TS over RTP through
+ GStreamer.

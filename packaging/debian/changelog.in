@@ -1,0 +1,5 @@
+miracast (@VERSION@) unstable; urgency=medium
+
+  * Release @VERSION@.
+
+ -- André Furlan <ensismoebius@gmail.com>  @DATE@
