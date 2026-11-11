@@ -1,0 +1,10 @@
+parseParams call:[emplace_back,find,split,substr,trim] noreturn:[emplace_back]
+findParam call:[begin,end,find_if]
+parseParamNames call:[empty,push_back,split,trim] noreturn:[push_back]
+wfdDeviceInfoBits
+wfdDeviceInfoSubelem call:[hexString,wfdDeviceInfoBits] noreturn:[hexString]
+parseWfdDevInfo call:[parseHex,size,startsWith,substr]
+wfdIsSink
+wfdIsSource
+sessionId call:[split,trim] noreturn:[trim]
+parseClientPort call:[parseDec,split,startsWith,substr,trim]

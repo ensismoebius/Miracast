@@ -1,0 +1,9 @@
+sendChain call:[to_string]
+GstSourceMedia
+GstSourceMedia call:[release] noreturn:[release]
+release call:[gstShutdown,stop] noreturn:[stop]
+captureFragment call:[empty,gstFactoryExists,start,to_string]
+start call:[audioChain,c_str,captureFragment,empty,gstInit,gstLaunch,gst_element_set_state,logf,release,sendChain,videoChain]
+stop call:[release] noreturn:[release]
+requestKeyframe call:[GST_BIN,gst_bin_get_by_name,gst_element_send_event,gst_object_unref,gst_video_event_new_upstream_force_key_unit] noreturn:[gst_object_unref]
+healthy call:[gstBusHealthy] noreturn:[gstBusHealthy]

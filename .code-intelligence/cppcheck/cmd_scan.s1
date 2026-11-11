@@ -1,0 +1,7 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+printInfrastructure call:[c_str,discoverSinks,printf,size] noreturn:[printf]
+printP2p call:[c_str,configure,init,printf,scan,wfdIsSink]
+runScan call:[printInfrastructure,printP2p] noreturn:[printP2p]

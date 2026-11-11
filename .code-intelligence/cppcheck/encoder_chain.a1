@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/encoder_chain.cpp:10:13" my-argnr="1" my-argname="cfg" file="src/encoder_chain.cpp" line="12" col="41" value="0"/>
+    <unsafe-usage my-id="src/encoder_chain.cpp:10:13" my-argnr="2" my-argname="set" file="src/encoder_chain.cpp" line="15" col="6" value="0"/>
+    <unsafe-usage my-id="src/encoder_chain.hpp:13:13" my-argnr="1" my-argname="cfg" file="src/encoder_chain.cpp" line="41" col="24" value="0"/>
+    <unsafe-usage my-id="src/encoder_chain.hpp:13:13" my-argnr="2" my-argname="set" file="src/encoder_chain.cpp" line="44" col="70" value="0"/>
+    <unsafe-usage my-id="src/encoder_chain.hpp:16:13" my-argnr="1" my-argname="set" file="src/encoder_chain.cpp" line="53" col="3" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/capture_settings.hpp</filename>
+    <filename>src/encoder_chain.hpp</filename>
+    <filename>src/stream_config.hpp</filename>
+  </includes>
+  <hash>4049302163002820496</hash>
+</analyzerinfo>

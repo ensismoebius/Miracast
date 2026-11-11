@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/cmd_cast.cpp" line="26" col="6" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/cmd_cast.cpp" line="100" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/cmd_cast.cpp" line="105" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/cmd_cast.cpp:19:21" my-argnr="1" my-argname="link" file="src/cmd_cast.cpp" line="21" col="26" value="0"/>
+    <unsafe-usage my-id="src/cmd_cast.cpp:19:21" my-argnr="2" my-argname="opts" file="src/cmd_cast.cpp" line="21" col="36" value="0"/>
+    <unsafe-usage my-id="src/cmd_cast.cpp:31:10" my-argnr="1" my-argname="opts" file="src/cmd_cast.cpp" line="35" col="19" value="0"/>
+    <unsafe-usage my-id="src/cmd_cast.cpp:73:5" my-argnr="2" my-argname="sink" file="src/cmd_cast.cpp" line="76" col="15" value="0"/>
+    <unsafe-usage my-id="src/commands.hpp:15:5" my-argnr="1" my-argname="opts" file="src/cmd_cast.cpp" line="87" col="6" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/cast_link.hpp</filename>
+    <filename>src/cast_session.hpp</filename>
+    <filename>src/commands.hpp</filename>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/group.hpp</filename>
+    <filename>src/group_network.hpp</filename>
+    <filename>src/net.hpp</filename>
+    <filename>src/options.hpp</filename>
+    <filename>src/p2p_link.hpp</filename>
+    <filename>src/peer.hpp</filename>
+    <filename>src/process.hpp</filename>
+    <filename>src/sink_info.hpp</filename>
+    <filename>src/sink_lookup.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+    <filename>src/wpa_ctrl.hpp</filename>
+  </includes>
+  <hash>5243048124461013336</hash>
+</analyzerinfo>

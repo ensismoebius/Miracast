@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="functionStatic" severity="style" msg="The member function &apos;mc::Parser::parseHead&apos; can be static." verbose="The member function &apos;mc::Parser::parseHead&apos; can be static." cwe="398" hash="6014806671843290434" file0="src/rtsp.cpp">
+            <location file="src/rtsp.cpp" line="113" column="14"/>
+            <location file="src/rtsp.hpp" line="46" column="7"/>
+            <symbol>mc::Parser::parseHead</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" hash="16673008280957677782" file0="src/rtsp.cpp">
+            <location file="src/rtsp.cpp" line="20" column="4"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" hash="4701847891318671659" file0="src/rtsp.cpp">
+            <location file="src/rtsp.cpp" line="29" column="31"/>
+        </error>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/rtsp.cpp:11:6" my-argnr="1" my-argname="a" file="src/rtsp.cpp" line="13" col="17" value="0"/>
+    <unsafe-usage my-id="src/rtsp.cpp:11:6" my-argnr="2" my-argname="b" file="src/rtsp.cpp" line="13" col="31" value="0"/>
+    <unsafe-usage my-id="src/rtsp.hpp:46:7" my-argnr="1" my-argname="head" file="src/rtsp.cpp" line="115" col="27" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/rtsp.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>16272937092683406524</hash>
+</analyzerinfo>

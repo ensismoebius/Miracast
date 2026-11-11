@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="uninitMemberVarNoCtor" severity="warning" msg="Member variable &apos;DecodeCtx::pipeline&apos; has no initializer." verbose="Member variable &apos;DecodeCtx::pipeline&apos; has no initializer. Member variables of native types, pointers, or references are left uninitialized when the class is instantiated. That may cause bugs or undefined behavior." cwe="398" hash="17458799068840291981" file0="src/media.cpp">
+            <location file="src/media.cpp" line="72" column="14"/>
+            <symbol>DecodeCtx::pipeline</symbol>
+        </error>
+        <error id="virtualCallInConstructor" severity="style" msg="Virtual function &apos;stop&apos; is called from destructor &apos;~GstSinkMedia()&apos; at line 127. Dynamic binding is not used." verbose="Virtual function &apos;stop&apos; is called from destructor &apos;~GstSinkMedia()&apos; at line 127. Dynamic binding is not used." hash="12593922796533802330" file0="src/media.cpp">
+            <location file="src/media.hpp" line="24" column="7" info="stop is a virtual function"/>
+            <location file="src/media.cpp" line="127" column="2" info="Calling stop"/>
+        </error>
+        <error id="virtualCallInConstructor" severity="style" msg="Virtual function &apos;stop&apos; is called from destructor &apos;~GstSourceMedia()&apos; at line 169. Dynamic binding is not used." verbose="Virtual function &apos;stop&apos; is called from destructor &apos;~GstSourceMedia()&apos; at line 169. Dynamic binding is not used." hash="10587569554400927444" file0="src/media.cpp">
+            <location file="src/media.hpp" line="42" column="7" info="stop is a virtual function"/>
+            <location file="src/media.cpp" line="169" column="2" info="Calling stop"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:15:6" call-funcname="logf" call-argnr="1" file="src/media.cpp" line="30" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:15:6" call-funcname="logf" call-argnr="1" file="src/media.cpp" line="50" col="8" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:15:6" call-funcname="logf" call-argnr="1" file="src/media.cpp" line="191" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/media.cpp:25:13" my-argnr="1" my-argname="desc" file="src/media.cpp" line="28" col="35" value="0"/>
+    <unsafe-usage my-id="src/media.cpp:79:6" my-argnr="3" my-argname="desc" file="src/media.cpp" line="82" col="51" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/media.hpp</filename>
+    <filename>src/media_iface.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>12911207742922934164</hash>
+</analyzerinfo>

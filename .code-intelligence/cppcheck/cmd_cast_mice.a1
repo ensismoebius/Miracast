@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/net.hpp:17:16" call-funcname="tcpAccept" call-argnr="3" file="src/cmd_cast_mice.cpp" line="25" col="19" call-argexpr="&amp;peer" call-argvaluetype="7" call-argvalue="24" call-argvalue-ufr="0"/><function-call call-id="src/net.hpp:29:5" call-funcname="recvSome" call-argnr="3" file="src/cmd_cast_mice.cpp" line="33" col="26" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/cmd_cast_mice.cpp" line="44" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/cmd_cast_mice.cpp" line="49" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/cmd_cast_mice.cpp" line="62" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/cmd_cast_mice.cpp:30:6" my-argnr="1" my-argname="control" file="src/cmd_cast_mice.cpp" line="33" col="27" value="0"/>
+    <unsafe-usage my-id="src/commands.hpp:18:5" my-argnr="1" my-argname="opts" file="src/cmd_cast_mice.cpp" line="43" col="6" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/cast_session.hpp</filename>
+    <filename>src/commands.hpp</filename>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/mice_command.hpp</filename>
+    <filename>src/mice_protocol.hpp</filename>
+    <filename>src/net.hpp</filename>
+    <filename>src/options.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+  </includes>
+  <hash>239953324453754626</hash>
+</analyzerinfo>

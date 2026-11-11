@@ -1,0 +1,13 @@
+running
+FileDescriptor
+FileDescriptor
+get
+valid
+failed
+failed
+finished
+finish
+state
+bringUp call:[accept,c_str,configure,ifaceAddress,init,load,logf,ownerAddress,setupClient,setupOwner,value_or]
+waitForSource call:[get,load,tcpAccept,valid] noreturn:[tcpAccept]
+runSink call:[bringUp,c_str,failed,get,healthy,load,logf,media,pumpSession,removeGroup,sendAll,session,tcpListen,valid,waitForSource] noreturn:[healthy,removeGroup,sendAll]

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/audio_codec.hpp</filename>
+    <filename>src/h264_codec.hpp</filename>
+    <filename>src/source_config.hpp</filename>
+    <filename>src/stream_config.hpp</filename>
+    <filename>src/video_formats.hpp</filename>
+  </includes>
+  <hash>11466627174843927346</hash>
+</analyzerinfo>

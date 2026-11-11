@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/message.hpp</filename>
+    <filename>src/parser.hpp</filename>
+  </includes>
+  <hash>15722433730091525600</hash>
+</analyzerinfo>

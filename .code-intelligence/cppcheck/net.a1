@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/net.cpp" line="74" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/net.hpp:14:16" my-argnr="1" my-argname="addr" file="src/net.cpp" line="65" col="16" value="0"/>
+    <unsafe-usage my-id="src/net.hpp:20:16" my-argnr="1" my-argname="addr" file="src/net.cpp" line="101" col="16" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/net.cpp:26:6" my-argnr="1" my-argname="addr" file="src/net.cpp" line="31" col="28" value="0"/>
+    <unsafe-usage my-id="src/net.hpp:26:6" my-argnr="2" my-argname="data" file="src/net.cpp" line="135" col="16" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/net.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>17060652850103152526</hash>
+</analyzerinfo>

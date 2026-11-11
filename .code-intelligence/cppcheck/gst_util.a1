@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/gst_util.cpp" line="36" col="6" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/gst_util.cpp" line="55" col="8" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/gst_util.hpp:18:13" my-argnr="1" my-argname="desc" file="src/gst_util.cpp" line="33" col="42" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/gst_util.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>8734514128491317230</hash>
+</analyzerinfo>

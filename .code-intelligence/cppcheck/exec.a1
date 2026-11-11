@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/exec.hpp</filename>
+    <filename>src/process_spawn.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>1886265661447656940</hash>
+</analyzerinfo>

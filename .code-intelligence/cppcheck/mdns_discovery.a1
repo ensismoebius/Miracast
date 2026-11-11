@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/mdns_discovery.cpp:36:6" my-argnr="1" my-argname="sock" file="src/mdns_discovery.cpp" line="43" col="11" value="0"/>
+    <unsafe-usage my-id="src/mdns_discovery.cpp:48:25" my-argnr="1" my-argname="sock" file="src/mdns_discovery.cpp" line="50" col="13" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/dns_packet.hpp</filename>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/mdns_discovery.hpp</filename>
+    <filename>src/sink_info.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>10422315457275882053</hash>
+</analyzerinfo>

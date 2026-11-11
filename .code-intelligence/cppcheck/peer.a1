@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+  </includes>
+  <hash>17599847252490878442</hash>
+</analyzerinfo>

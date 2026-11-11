@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/capture_settings.hpp</filename>
+    <filename>src/screen_capture.hpp</filename>
+    <filename>src/source_media.hpp</filename>
+    <filename>src/stream_config.hpp</filename>
+  </includes>
+  <hash>1421170793866725470</hash>
+</analyzerinfo>

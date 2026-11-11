@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/client_ports.hpp:19:36" my-argnr="1" my-argname="value" file="src/client_ports.cpp" line="19" col="25" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/client_ports.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>8705920205417230835</hash>
+</analyzerinfo>

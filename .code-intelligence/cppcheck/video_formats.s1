@@ -1,0 +1,6 @@
+hexOrNone call:[hexString,string] noreturn:[string]
+optionalField call:[parseHex]
+parseCodec call:[optionalField,parseHex,size]
+codecText call:[hexOrNone,hexString] noreturn:[hexOrNone]
+serialize call:[codecText,empty,hexString,size] noreturn:[codecText]
+parse call:[parseCodec,parseHex,push_back,size,split,toLower,trim,words] noreturn:[push_back]

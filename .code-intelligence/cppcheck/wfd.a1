@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::copy_if algorithm instead of a raw loop." verbose="Consider using std::copy_if algorithm instead of a raw loop." cwe="398" hash="12738361041326862889" file0="src/wfd.cpp">
+            <location file="src/wfd.cpp" line="69" column="7"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" hash="7668705937689455627" file0="src/wfd.cpp">
+            <location file="src/wfd.cpp" line="78" column="4"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::accumulate algorithm instead of a raw loop." verbose="Consider using std::accumulate algorithm instead of a raw loop." cwe="398" hash="15641232841787775307" file0="src/wfd.cpp">
+            <location file="src/wfd.cpp" line="94" column="9"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" hash="4786118007814332279" file0="src/wfd.cpp">
+            <location file="src/wfd.cpp" line="215" column="4"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="src/wfd.cpp:31:26" call-funcname="parseCodecTokens" call-argnr="2" file="src/wfd.cpp" line="138" col="38" call-argexpr="at" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0">
+  <path file="src/wfd.cpp" line="126" col="15" info="Assignment &apos;at=0&apos;, assigned value is 0"/>
+  <path file="src/wfd.cpp" line="127" col="9" info="Assuming condition is false"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/wfd.cpp:64:26" my-argnr="1" my-argname="s" file="src/wfd.cpp" line="67" col="38" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:52:37" my-argnr="1" my-argname="value" file="src/wfd.cpp" line="121" col="19" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:59:36" my-argnr="1" my-argname="value" file="src/wfd.cpp" line="154" col="24" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:68:25" my-argnr="1" my-argname="value" file="src/wfd.cpp" line="184" col="19" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:72:11" my-argnr="1" my-argname="body" file="src/wfd.cpp" line="202" col="31" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:75:26" my-argnr="1" my-argname="body" file="src/wfd.cpp" line="224" col="31" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:85:25" my-argnr="1" my-argname="hexIn" file="src/wfd.cpp" line="249" col="18" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:90:13" my-argnr="1" my-argname="header" file="src/wfd.cpp" line="279" col="20" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:91:25" my-argnr="1" my-argname="transport" file="src/wfd.cpp" line="284" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/wfd.cpp:31:26" my-argnr="1" my-argname="t" file="src/wfd.cpp" line="33" col="6" value="0"/>
+    <unsafe-usage my-id="src/wfd.hpp:67:13" my-argnr="1" my-argname="codecs" file="src/wfd.cpp" line="169" col="6" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/util.hpp</filename>
+    <filename>src/wfd.hpp</filename>
+  </includes>
+  <hash>5838231113934021038</hash>
+</analyzerinfo>

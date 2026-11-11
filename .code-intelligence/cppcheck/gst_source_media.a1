@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/gst_source_media.cpp" line="70" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <includes>
+    <filename>src/capture_settings.hpp</filename>
+    <filename>src/encoder_chain.hpp</filename>
+    <filename>src/gst_source_media.hpp</filename>
+    <filename>src/gst_util.hpp</filename>
+    <filename>src/screen_capture.hpp</filename>
+    <filename>src/source_media.hpp</filename>
+    <filename>src/stream_config.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>3728786937667389736</hash>
+</analyzerinfo>

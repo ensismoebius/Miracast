@@ -1,0 +1,5 @@
+be16
+readName call:[be16,empty,size,substr]
+applyRecord call:[be16,find,readName,split] noreturn:[be16]
+buildPtrQuery call:[out,push_back,size,split,string]
+parseDisplayResponse call:[applyRecord,be16,empty,readName,size]

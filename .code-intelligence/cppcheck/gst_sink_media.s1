@@ -1,0 +1,10 @@
+padAddedTrampoline call:[onPadAdded] noreturn:[onPadAdded]
+linkBranch call:[GST_BIN,c_str,g_error_free,gst_bin_add,gst_element_get_static_pad,gst_element_sync_state_with_parent,gst_object_unref,gst_pad_link,gst_parse_bin_from_description] noreturn:[g_error_free,gst_object_unref]
+padMediaType call:[gst_caps_get_structure,gst_caps_unref,gst_pad_get_current_caps,gst_pad_query_caps,gst_structure_get_name] noreturn:[gst_pad_query_caps]
+GstSinkMedia
+GstSinkMedia call:[release] noreturn:[release]
+release call:[gstShutdown] noreturn:[gstShutdown]
+start call:[GST_BIN,G_CALLBACK,g_signal_connect,gstInit,gstLaunch,gst_bin_get_by_name,gst_element_set_state,gst_object_unref,release,to_string]
+onPadAdded call:[linkBranch,padMediaType,startsWith] noreturn:[linkBranch]
+stop call:[release] noreturn:[release]
+healthy call:[gstBusHealthy] noreturn:[gstBusHealthy]

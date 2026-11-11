@@ -1,0 +1,21 @@
+failed
+failed
+finished
+finish
+state
+randomSession call:[device,hexString] noreturn:[hexString]
+parameterRequest call:[makeRequest,set]
+SourceSession
+SourceSession call:[closeMedia] noreturn:[closeMedia]
+closeMedia call:[stop] noreturn:[stop]
+abort call:[closeMedia,finish] noreturn:[finish]
+start call:[fail,find,header,makeRequest,sendGetCaps,sendRequest,set] noreturn:[fail,sendGetCaps,sendRequest]
+sendGetCaps call:[makeRequest,onCaps,sendRequest,set] noreturn:[onCaps,sendRequest]
+onCaps call:[c_str,fail,findParam,has_value,logf,parse,parseList,parseParams,selectAudio,selectFormat,sendSelection] noreturn:[sendSelection]
+sendSelection call:[fail,parameterRequest,push_back,sendRequest,serialize,serializeList] noreturn:[fail,sendRequest]
+handleRequest call:[closeMedia,cseq,finish,makeResponse,onPlay,onSetParameter,onSetup,reply,sendResponse,set,string] noreturn:[finish,onPlay,onSetParameter,onSetup,reply,sendResponse]
+onSetup call:[cseq,header,makeResponse,parseClientPort,randomSession,reply,sendResponse,set,to_string]
+onPlay call:[c_str,fail,header,logf,now,reply,sessionId,start] noreturn:[logf]
+onSetParameter call:[parseParamNames,reply,requestKeyframe] noreturn:[requestKeyframe]
+tick call:[fail,makeRequest,seconds,sendRequest] noreturn:[fail,sendRequest]
+requestTeardown call:[parameterRequest,sendRequest] noreturn:[sendRequest]

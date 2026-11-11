@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;GstSinkMedia::videoSink_&apos; is never used." verbose="class member &apos;GstSinkMedia::videoSink_&apos; is never used." cwe="563" hash="10167515475643153905" file0="src/media.hpp">
+            <location file="src/media.hpp" line="28" column="14"/>
+            <symbol>GstSinkMedia::videoSink_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;GstSinkMedia::audioSink_&apos; is never used." verbose="class member &apos;GstSinkMedia::audioSink_&apos; is never used." cwe="563" hash="15128832068990657062" file0="src/media.hpp">
+            <location file="src/media.hpp" line="29" column="14"/>
+            <symbol>GstSinkMedia::audioSink_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;GstSinkMedia::jitterMs_&apos; is never used." verbose="class member &apos;GstSinkMedia::jitterMs_&apos; is never used." cwe="563" hash="1817169589934265547" file0="src/media.hpp">
+            <location file="src/media.hpp" line="30" column="6"/>
+            <symbol>GstSinkMedia::jitterMs_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;GstSinkMedia::ctx_&apos; is never used." verbose="class member &apos;GstSinkMedia::ctx_&apos; is never used." cwe="563" hash="1434868250017287182" file0="src/media.hpp">
+            <location file="src/media.hpp" line="32" column="29"/>
+            <symbol>GstSinkMedia::ctx_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;GstSourceMedia::capture_&apos; is never used." verbose="class member &apos;GstSourceMedia::capture_&apos; is never used." cwe="563" hash="16473734603096545060" file0="src/media.hpp">
+            <location file="src/media.hpp" line="48" column="14"/>
+            <symbol>GstSourceMedia::capture_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;GstSourceMedia::testPattern_&apos; is never used." verbose="class member &apos;GstSourceMedia::testPattern_&apos; is never used." cwe="563" hash="7316170582835647358" file0="src/media.hpp">
+            <location file="src/media.hpp" line="49" column="7"/>
+            <symbol>GstSourceMedia::testPattern_</symbol>
+        </error>
+  <includes>
+    <filename>src/media_iface.hpp</filename>
+  </includes>
+  <hash>6774197479710560179</hash>
+</analyzerinfo>

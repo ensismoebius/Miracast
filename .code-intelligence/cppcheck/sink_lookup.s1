@@ -1,0 +1,2 @@
+isIpv4 call:[c_str,inet_pton]
+findInfrastructureSink call:[begin,discoverSinks,empty,end,find_if,isIpv4,size,toLower] noreturn:[toLower]

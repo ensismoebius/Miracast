@@ -1,0 +1,8 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+FileDescriptor call:[reset] noreturn:[reset]
+operator= call:[release,reset] noreturn:[reset]
+release
+reset call:[close] noreturn:[close]

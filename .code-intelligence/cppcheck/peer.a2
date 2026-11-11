@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;RtspPeer::nextCseq_&apos; is never used." verbose="class member &apos;RtspPeer::nextCseq_&apos; is never used." cwe="563" hash="16213497162565804323" file0="src/peer.hpp">
+            <location file="src/peer.hpp" line="49" column="6"/>
+            <symbol>RtspPeer::nextCseq_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;RtspPeer::pending_&apos; is never used." verbose="class member &apos;RtspPeer::pending_&apos; is never used." cwe="563" hash="2286995841864794018" file0="src/peer.hpp">
+            <location file="src/peer.hpp" line="52" column="33"/>
+            <symbol>RtspPeer::pending_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;RtspPeer::parser_&apos; is never used." verbose="class member &apos;RtspPeer::parser_&apos; is never used." cwe="563" hash="4926975002083189409" file0="src/peer.hpp">
+            <location file="src/peer.hpp" line="53" column="9"/>
+            <symbol>RtspPeer::parser_</symbol>
+        </error>
+  <includes>
+    <filename>src/rtsp.hpp</filename>
+  </includes>
+  <hash>3630036420788608030</hash>
+</analyzerinfo>

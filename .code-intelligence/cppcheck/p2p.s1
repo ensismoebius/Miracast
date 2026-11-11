@@ -1,0 +1,19 @@
+running
+Fd
+Fd
+get
+valid
+ownerAddress
+field call:[find,size,substr] noreturn:[find,substr]
+findPeer
+expired call:[load,now]
+init call:[open] noreturn:[open]
+configure call:[command,string,wfdDeviceInfoSubelem]
+collectPeer call:[back,empty,field,findPeer,parseWfdDevInfo,push_back,size,split,startsWith]
+scan call:[collectPeer,command,expired,nextEvent,now,seconds] noreturn:[collectPeer]
+waitGroup call:[c_str,command,expired,logf,nextEvent,now,seconds,size,split,startsWith] noreturn:[command]
+connect call:[command,waitGroup] noreturn:[waitGroup]
+accept call:[command,waitGroup] noreturn:[waitGroup]
+removeGroup call:[command] noreturn:[command]
+setupOwner call:[c_str,commandExists,logf,ownerAddress,runCommand,spawn] noreturn:[spawn]
+setupClient call:[commandExists,logf,runCommand,string]

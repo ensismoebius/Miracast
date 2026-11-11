@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/screen_capture.cpp" line="29" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/screen_capture.cpp" line="48" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/screen_capture.cpp" line="109" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <includes>
+    <filename>src/screen_capture.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>15839825800410866551</hash>
+</analyzerinfo>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/p2p_link.cpp" line="59" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/wfd_params.hpp:37:25" call-funcname="parseWfdDevInfo" call-argnr="2" file="src/p2p_link.cpp" line="100" col="35" call-argexpr="&amp;port" call-argvaluetype="7" call-argvalue="2" call-argvalue-ufr="0"/><function-call call-id="src/p2p_link.hpp:41:7" call-funcname="handleEvent" call-argnr="2" file="src/p2p_link.cpp" line="151" col="27" call-argexpr="sinkSide" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0">
+  <path file="src/p2p_link.cpp" line="164" col="37" info="Calling function &apos;waitGroup&apos;, 3rd argument &apos;false&apos; value is 0"/>
+</function-call><function-call call-id="src/p2p_link.hpp:43:23" call-funcname="waitGroup" call-argnr="3" file="src/p2p_link.cpp" line="164" col="18" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/p2p_link.hpp:22:7" my-argnr="1" my-argname="ctrlDir" file="src/p2p_link.cpp" line="45" col="20" value="0"/>
+    <unsafe-usage my-id="src/p2p_link.hpp:22:7" my-argnr="2" my-argname="iface" file="src/p2p_link.cpp" line="45" col="29" value="0"/>
+    <unsafe-usage my-id="src/p2p_link.hpp:39:14" my-argnr="1" my-argname="event" file="src/p2p_link.cpp" line="83" col="18" value="0"/>
+    <unsafe-usage my-id="src/p2p_link.hpp:41:7" my-argnr="1" my-argname="event" file="src/p2p_link.cpp" line="127" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/p2p_link.cpp:17:13" my-argnr="1" my-argname="line" file="src/p2p_link.cpp" line="20" col="15" value="0"/>
+    <unsafe-usage my-id="src/p2p_link.cpp:36:6" my-argnr="2" my-argname="stop" file="src/p2p_link.cpp" line="38" col="9" value="0"/>
+    <unsafe-usage my-id="src/p2p_link.hpp:28:23" my-argnr="1" my-argname="peer" file="src/p2p_link.cpp" line="162" col="38" value="0"/>
+    <unsafe-usage my-id="src/p2p_link.hpp:33:7" my-argnr="1" my-argname="group" file="src/p2p_link.cpp" line="177" col="38" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/group.hpp</filename>
+    <filename>src/p2p_link.hpp</filename>
+    <filename>src/peer.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+    <filename>src/wpa_ctrl.hpp</filename>
+  </includes>
+  <hash>9199149262400882732</hash>
+</analyzerinfo>

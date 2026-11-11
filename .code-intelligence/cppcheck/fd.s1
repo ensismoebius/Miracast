@@ -1,0 +1,8 @@
+Fd
+Fd
+get
+valid
+Fd call:[reset] noreturn:[reset]
+operator= call:[release,reset] noreturn:[reset]
+release
+reset call:[close] noreturn:[close]

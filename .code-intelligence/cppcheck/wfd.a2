@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CeaMode::bit&apos; is never used." verbose="struct member &apos;CeaMode::bit&apos; is never used." cwe="563" hash="16213157139185914250" file0="src/wfd.hpp">
+            <location file="src/wfd.hpp" line="18" column="6"/>
+            <symbol>CeaMode::bit</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CeaMode::width&apos; is never used." verbose="struct member &apos;CeaMode::width&apos; is never used." cwe="563" hash="10925491348662079215" file0="src/wfd.hpp">
+            <location file="src/wfd.hpp" line="19" column="6"/>
+            <symbol>CeaMode::width</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CeaMode::height&apos; is never used." verbose="struct member &apos;CeaMode::height&apos; is never used." cwe="563" hash="3350669903692919977" file0="src/wfd.hpp">
+            <location file="src/wfd.hpp" line="20" column="6"/>
+            <symbol>CeaMode::height</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CeaMode::fps&apos; is never used." verbose="struct member &apos;CeaMode::fps&apos; is never used." cwe="563" hash="4723825530075999151" file0="src/wfd.hpp">
+            <location file="src/wfd.hpp" line="21" column="6"/>
+            <symbol>CeaMode::fps</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CeaMode::interlaced&apos; is never used." verbose="struct member &apos;CeaMode::interlaced&apos; is never used." cwe="563" hash="1687807854125911858" file0="src/wfd.hpp">
+            <location file="src/wfd.hpp" line="22" column="7"/>
+            <symbol>CeaMode::interlaced</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CeaMode::level&apos; is never used." verbose="struct member &apos;CeaMode::level&apos; is never used." cwe="563" hash="5188704799279277523" file0="src/wfd.hpp">
+            <location file="src/wfd.hpp" line="23" column="10"/>
+            <symbol>CeaMode::level</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;AudioCodec::name&apos; is never used." verbose="struct member &apos;AudioCodec::name&apos; is never used." cwe="563" hash="17357670186491862843" file0="src/wfd.hpp">
+            <location file="src/wfd.hpp" line="63" column="14"/>
+            <symbol>AudioCodec::name</symbol>
+        </error>
+  <hash>9283744524632626047</hash>
+</analyzerinfo>

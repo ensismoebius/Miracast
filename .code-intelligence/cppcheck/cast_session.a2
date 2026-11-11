@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/options.hpp</filename>
+  </includes>
+  <hash>3651030585062429022</hash>
+</analyzerinfo>

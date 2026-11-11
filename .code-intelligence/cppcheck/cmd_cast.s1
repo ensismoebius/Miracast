@@ -1,0 +1,10 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+running
+pickPeer call:[c_str,logf,scan,wfdIsSink]
+bringUp call:[configure,connect,defaultGateway,empty,init,pickPeer,setupClient,setupOwner,string,value_or]
+connectToSink call:[load,tcpConnect,valid] noreturn:[tcpConnect]
+castToSink call:[c_str,logf,runCastMice] noreturn:[runCastMice]
+runCast call:[bringUp,c_str,castToSink,connectToSink,empty,findInfrastructureSink,logf,removeGroup,runCastMice,runSourceSession,valid] noreturn:[castToSink,removeGroup,runCastMice]

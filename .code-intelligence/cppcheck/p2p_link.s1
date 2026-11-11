@@ -1,0 +1,16 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+field call:[find,size,string,substr] noreturn:[find,substr]
+expired call:[load,now]
+init call:[open] noreturn:[open]
+supportsP2p call:[find,request]
+configure call:[command,logf,string,supportsP2p,wfdDeviceInfoSubelem]
+collectPeer call:[begin,emplace_back,empty,end,field,find_if,parseWfdDevInfo,size,split,startsWith]
+scan call:[collectPeer,command,expired,nextEvent,now,seconds] noreturn:[collectPeer]
+handleEvent call:[c_str,command,logf,size,split,startsWith] noreturn:[command,logf]
+waitGroup call:[expired,handleEvent,nextEvent,now,seconds]
+connect call:[command,waitGroup] noreturn:[waitGroup]
+accept call:[command,waitGroup] noreturn:[waitGroup]
+removeGroup call:[command] noreturn:[command]

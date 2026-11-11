@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/options.hpp</filename>
+    <filename>src/sink_info.hpp</filename>
+  </includes>
+  <hash>10719965206526776417</hash>
+</analyzerinfo>

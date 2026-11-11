@@ -1,0 +1,12 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+fillAddr call:[c_str,memcpy,memset,size,sizeof]
+stripPriority call:[empty,find,substr] noreturn:[substr]
+WpaCtrl call:[c_str,empty,reset,rmdir,unlink] noreturn:[rmdir,unlink]
+open call:[bind,c_str,command,connect,data,fillAddr,get,getenv,logf,mkdtemp,reset,sizeof,socket,strerror,string,valid] noreturn:[command]
+recvDatagram call:[assign,get,poll,recv,sizeof,while] noreturn:[poll]
+request call:[data,empty,get,push_back,recvDatagram,send,size,stripPriority,trim] noreturn:[push_back,trim]
+command call:[c_str,logf,request]
+nextEvent call:[empty,front,pop_front,recvDatagram,stripPriority] noreturn:[stripPriority]

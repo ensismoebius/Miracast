@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/wpa_ctrl.cpp" line="71" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/wpa_ctrl.hpp:31:7" my-argnr="1" my-argname="cmd" file="src/wpa_ctrl.cpp" line="115" col="29" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/wpa_ctrl.cpp:21:6" my-argnr="1" my-argname="path" file="src/wpa_ctrl.cpp" line="23" col="6" value="0"/>
+    <unsafe-usage my-id="src/wpa_ctrl.cpp:32:13" my-argnr="1" my-argname="line" file="src/wpa_ctrl.cpp" line="34" col="23" value="0"/>
+    <unsafe-usage my-id="src/wpa_ctrl.hpp:29:29" my-argnr="1" my-argname="cmd" file="src/wpa_ctrl.cpp" line="99" col="26" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/wpa_ctrl.hpp</filename>
+  </includes>
+  <hash>8836594048570289359</hash>
+</analyzerinfo>

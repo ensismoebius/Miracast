@@ -1,0 +1,1 @@
+reportCheck global:[g_failures] call:[fetch_add,fprintf] noreturn:[fetch_add]

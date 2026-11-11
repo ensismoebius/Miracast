@@ -1,0 +1,13 @@
+levelName
+hexDigit call:[tolower]
+isBlank call:[isspace]
+setLogLevel
+logf call:[fprintf,levelName,localtime_r,sizeof,strftime,time,va_end,va_start,vsnprintf] noreturn:[fprintf]
+trim call:[base,begin,end,find_if_not,rbegin,rend,string] noreturn:[string]
+split call:[find,push_back,substr]
+words call:[stream]
+toLower call:[begin,end,tolower,transform]
+startsWith call:[compare,size]
+parseHex call:[accumulate,all_of,begin,empty,end,hexDigit,isxdigit,return,size] noreturn:[accumulate,hexDigit]
+parseDec call:[all_of,begin,empty,end,isdigit,size,stol] noreturn:[stol]
+hexString call:[sizeof,snprintf]

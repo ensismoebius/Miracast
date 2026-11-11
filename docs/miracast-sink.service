@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: GPL-2.0-or-later
+[Unit]
+Description=Miracast sink
+After=wpa_supplicant.service
+Wants=wpa_supplicant.service
+
+[Service]
+ExecStart=/usr/bin/miracast sink --interface wlan0
+Restart=on-failure
+NoNewPrivileges=yes
+ProtectHome=read-only
+PrivateTmp=yes
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target

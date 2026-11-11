@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/parser.cpp:15:6" my-argnr="1" my-argname="line" file="src/parser.cpp" line="17" col="27" value="0"/>
+    <unsafe-usage my-id="src/parser.hpp:28:14" my-argnr="1" my-argname="head" file="src/parser.cpp" line="47" col="27" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/parser.hpp:30:31" my-argnr="1" my-argname="msg" file="src/parser.cpp" line="65" col="22" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/message.hpp</filename>
+    <filename>src/parser.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>15494218075478177056</hash>
+</analyzerinfo>

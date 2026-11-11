@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/net.hpp:17:16" call-funcname="tcpAccept" call-argnr="3" file="src/cmd_sink.cpp" line="54" col="19" call-argexpr="&amp;peerIp" call-argvaluetype="7" call-argvalue="24" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/cmd_sink.cpp:20:10" my-argnr="1" my-argname="opts" file="src/cmd_sink.cpp" line="24" col="19" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/commands.hpp</filename>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/group.hpp</filename>
+    <filename>src/group_network.hpp</filename>
+    <filename>src/gst_sink_media.hpp</filename>
+    <filename>src/message.hpp</filename>
+    <filename>src/net.hpp</filename>
+    <filename>src/options.hpp</filename>
+    <filename>src/p2p_link.hpp</filename>
+    <filename>src/parser.hpp</filename>
+    <filename>src/peer.hpp</filename>
+    <filename>src/process.hpp</filename>
+    <filename>src/rtsp_peer.hpp</filename>
+    <filename>src/session_pump.hpp</filename>
+    <filename>src/sink_config.hpp</filename>
+    <filename>src/sink_link.hpp</filename>
+    <filename>src/sink_media.hpp</filename>
+    <filename>src/sink_session.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+    <filename>src/wpa_ctrl.hpp</filename>
+  </includes>
+  <hash>7258413475497933513</hash>
+</analyzerinfo>

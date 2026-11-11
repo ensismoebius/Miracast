@@ -1,0 +1,22 @@
+reportCheck global:[g_failures] call:[fetch_add,fprintf] noreturn:[fetch_add]
+start
+stop
+start
+stop
+requestKeyframe
+failed
+failed
+finished
+finish
+state
+state
+testRtspParser call:[cseq,failed,feed,next,reportCheck] noreturn:[reportCheck]
+testVideoFormats call:[parse,reportCheck,serialize,size] noreturn:[reportCheck]
+testWfdIe call:[parseClientPort,parseWfdDevInfo,reportCheck,sessionId,wfdDeviceInfoSubelem,wfdIsSink,wfdIsSource] noreturn:[reportCheck]
+testSelection call:[progressiveCeaMask,push_back,reportCheck,selectFormat] noreturn:[reportCheck]
+testFullHandshake call:[SinkConfig,empty,failed,finished,onData,pump,reportCheck,requestIdr,requestTeardown,sink,source,start,state,swap] noreturn:[onData,reportCheck]
+testMice call:[id,miceCommandOf,miceFrameSize,miceSourceReady,miceStopProjection,reportCheck,size,string,substr,utf16le] noreturn:[reportCheck]
+testAudio call:[parseList,reportCheck,selectAudio,serializeList] noreturn:[reportCheck]
+testMdns call:[buildPtrQuery,parseDisplayResponse,reportCheck,resize,size,string,substr] noreturn:[reportCheck]
+testRejectsBadSelection call:[SinkConfig,feed,next,onData,reportCheck,sink] noreturn:[reportCheck]
+main global:[g_failures] call:[load,puts,testAudio,testFullHandshake,testMdns,testMice,testRejectsBadSelection,testRtspParser,testSelection,testVideoFormats,testWfdIe] noreturn:[puts]

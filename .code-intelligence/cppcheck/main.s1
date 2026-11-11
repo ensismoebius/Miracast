@@ -1,0 +1,2 @@
+onSignal call:[store] noreturn:[store]
+main call:[parseOptions,printUsage,runCast,runScan,runSink,signal] noreturn:[runCast,runScan,runSink]

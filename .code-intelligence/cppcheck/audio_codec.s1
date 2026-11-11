@@ -1,0 +1,2 @@
+serializeList call:[empty,hexString,size] noreturn:[hexString]
+parseList call:[parseHex,push_back,size,split,toLower,trim,words] noreturn:[push_back]

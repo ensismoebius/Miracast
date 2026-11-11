@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="functionStatic" severity="style" msg="The member function &apos;mc::GroupNetwork::ownerAddress&apos; can be static." verbose="The member function &apos;mc::GroupNetwork::ownerAddress&apos; can be static." cwe="398" hash="12284148604038681148" file0="src/p2p.hpp">
+            <location file="src/p2p.hpp" line="53" column="14"/>
+            <symbol>mc::GroupNetwork::ownerAddress</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Peer::addr&apos; is never used." verbose="struct member &apos;Peer::addr&apos; is never used." cwe="563" hash="5250834981445429225" file0="src/p2p.hpp">
+            <location file="src/p2p.hpp" line="17" column="14"/>
+            <symbol>Peer::addr</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Peer::name&apos; is never used." verbose="struct member &apos;Peer::name&apos; is never used." cwe="563" hash="9401707617601348162" file0="src/p2p.hpp">
+            <location file="src/p2p.hpp" line="18" column="14"/>
+            <symbol>Peer::name</symbol>
+        </error>
+  <includes>
+    <filename>src/net.hpp</filename>
+    <filename>src/process.hpp</filename>
+    <filename>src/wfd.hpp</filename>
+    <filename>src/wpa_ctrl.hpp</filename>
+  </includes>
+  <hash>13449186677322121076</hash>
+</analyzerinfo>

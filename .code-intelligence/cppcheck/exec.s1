@@ -1,0 +1,2 @@
+commandExists call:[access,any_of,begin,c_str,empty,end,getenv,split] noreturn:[any_of]
+runCommand call:[WEXITSTATUS,WIFEXITED,forkExec,waitpid]

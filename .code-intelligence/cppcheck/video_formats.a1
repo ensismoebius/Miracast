@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/video_formats.cpp:27:26" call-funcname="parseCodec" call-argnr="2" file="src/video_formats.cpp" line="94" col="32" call-argexpr="first" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0">
+  <path file="src/video_formats.cpp" line="84" col="18" info="Assignment &apos;first=0&apos;, assigned value is 0"/>
+  <path file="src/video_formats.cpp" line="85" col="11" info="Assuming condition is false"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/video_formats.cpp:18:25" my-argnr="1" my-argname="token" file="src/video_formats.cpp" line="20" col="30" value="0"/>
+    <unsafe-usage my-id="src/video_formats.hpp:22:37" my-argnr="1" my-argname="value" file="src/video_formats.cpp" line="79" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/video_formats.cpp:27:26" my-argnr="1" my-argname="tok" file="src/video_formats.cpp" line="29" col="6" value="0"/>
+    <unsafe-usage my-id="src/video_formats.cpp:53:13" my-argnr="1" my-argname="codec" file="src/video_formats.cpp" line="55" col="19" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/h264_codec.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/video_formats.hpp</filename>
+  </includes>
+  <hash>18407777749419972929</hash>
+</analyzerinfo>

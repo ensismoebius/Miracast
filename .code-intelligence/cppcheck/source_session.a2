@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/audio_codec.hpp</filename>
+    <filename>src/client_ports.hpp</filename>
+    <filename>src/h264_codec.hpp</filename>
+    <filename>src/message.hpp</filename>
+    <filename>src/parser.hpp</filename>
+    <filename>src/rtsp_peer.hpp</filename>
+    <filename>src/selection.hpp</filename>
+    <filename>src/source_config.hpp</filename>
+    <filename>src/source_media.hpp</filename>
+    <filename>src/stream_config.hpp</filename>
+    <filename>src/video_formats.hpp</filename>
+  </includes>
+  <hash>10279023111561475111</hash>
+</analyzerinfo>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Class">
+<class name="FakeSinkMedia" file="tests/fake_sink_media.hpp" configuration="" line="7" col="1" hash="17759675706373766408"/>
+  </FileInfo>
+  <includes>
+    <filename>/home/ensismoebius/Repos/Miracast/src/sink_media.hpp</filename>
+  </includes>
+  <hash>1435616812579341695</hash>
+</analyzerinfo>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/group_network.cpp" line="36" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/group_network.cpp" line="41" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/group_network.cpp" line="57" col="6" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <includes>
+    <filename>src/exec.hpp</filename>
+    <filename>src/group_network.hpp</filename>
+    <filename>src/process.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>3176455724764009762</hash>
+</analyzerinfo>

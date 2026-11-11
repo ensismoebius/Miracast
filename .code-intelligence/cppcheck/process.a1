@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/process.hpp</filename>
+    <filename>src/process_spawn.hpp</filename>
+  </includes>
+  <hash>13659515162695215886</hash>
+</analyzerinfo>

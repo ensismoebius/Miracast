@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/sink_lookup.cpp:19:6" my-argnr="1" my-argname="text" file="src/sink_lookup.cpp" line="22" col="28" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/mdns_discovery.hpp</filename>
+    <filename>src/options.hpp</filename>
+    <filename>src/sink_info.hpp</filename>
+    <filename>src/sink_lookup.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>16883673248161519348</hash>
+</analyzerinfo>

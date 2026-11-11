@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/dns_packet.cpp:26:28" call-funcname="readName" call-argnr="3" file="src/dns_packet.cpp" line="56" col="31" call-argexpr="after" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0">
+  <path file="src/dns_packet.cpp" line="55" col="18" info="Assignment &apos;after=0&apos;, assigned value is 0"/>
+</function-call>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/dns_packet.cpp:19:10" my-argnr="1" my-argname="data" file="src/dns_packet.cpp" line="21" col="59" value="0"/>
+    <unsafe-usage my-id="src/dns_packet.hpp:16:13" my-argnr="1" my-argname="service" file="src/dns_packet.cpp" line="70" col="33" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/dns_packet.cpp:19:10" my-argnr="1" my-argname="data" file="src/dns_packet.cpp" line="21" col="59" value="0"/>
+    <unsafe-usage my-id="src/dns_packet.hpp:19:25" my-argnr="1" my-argname="packet" file="src/dns_packet.cpp" line="82" col="6" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/dns_packet.hpp</filename>
+    <filename>src/sink_info.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>6953810799519281285</hash>
+</analyzerinfo>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Parser::kMaxHeaderBytes&apos; is never used." verbose="class member &apos;Parser::kMaxHeaderBytes&apos; is never used." cwe="563" hash="11482123254579810451" file0="src/rtsp.hpp">
+            <location file="src/rtsp.hpp" line="35" column="26"/>
+            <symbol>Parser::kMaxHeaderBytes</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Parser::kMaxBodyBytes&apos; is never used." verbose="class member &apos;Parser::kMaxBodyBytes&apos; is never used." cwe="563" hash="9022175181387501410" file0="src/rtsp.hpp">
+            <location file="src/rtsp.hpp" line="36" column="26"/>
+            <symbol>Parser::kMaxBodyBytes</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Parser::buf_&apos; is never used." verbose="class member &apos;Parser::buf_&apos; is never used." cwe="563" hash="8133169921156764296" file0="src/rtsp.hpp">
+            <location file="src/rtsp.hpp" line="47" column="14"/>
+            <symbol>Parser::buf_</symbol>
+        </error>
+  <hash>14637326505485395379</hash>
+</analyzerinfo>

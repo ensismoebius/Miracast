@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Class">
+<class name="FakeSourceMedia" file="tests/fake_source_media.hpp" configuration="" line="7" col="1" hash="7643601491681076184"/>
+  </FileInfo>
+  <includes>
+    <filename>/home/ensismoebius/Repos/Miracast/src/source_media.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/stream_config.hpp</filename>
+  </includes>
+  <hash>13289491395331638040</hash>
+</analyzerinfo>

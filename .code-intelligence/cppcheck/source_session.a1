@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/rtsp_peer.hpp:47:7" call-funcname="sendRequest" call-argnr="2" file="src/source_session.cpp" line="237" col="13" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/source_session.hpp:50:7" my-argnr="1" my-argname="resp" file="src/source_session.cpp" line="92" col="6" value="0"/>
+    <unsafe-usage my-id="src/source_session.hpp:44:7" my-argnr="1" my-argname="req" file="src/source_session.cpp" line="149" col="6" value="0"/>
+    <unsafe-usage my-id="src/source_session.hpp:54:7" my-argnr="1" my-argname="req" file="src/source_session.cpp" line="175" col="25" value="0"/>
+    <unsafe-usage my-id="src/source_session.hpp:56:7" my-argnr="1" my-argname="req" file="src/source_session.cpp" line="196" col="20" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/audio_codec.hpp</filename>
+    <filename>src/client_ports.hpp</filename>
+    <filename>src/h264_codec.hpp</filename>
+    <filename>src/message.hpp</filename>
+    <filename>src/parser.hpp</filename>
+    <filename>src/rtsp_peer.hpp</filename>
+    <filename>src/selection.hpp</filename>
+    <filename>src/source_config.hpp</filename>
+    <filename>src/source_media.hpp</filename>
+    <filename>src/source_session.hpp</filename>
+    <filename>src/stream_config.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/video_formats.hpp</filename>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+  </includes>
+  <hash>446401849743104873</hash>
+</analyzerinfo>

@@ -1,0 +1,9 @@
+textField
+numberField
+flagField
+applyOption call:[flagField,has_value,numberField,parseDec,textField] noreturn:[has_value]
+printCommands call:[fputs] noreturn:[fputs]
+printLinkOptions call:[fputs] noreturn:[fputs]
+printMediaOptions call:[fputs] noreturn:[fputs]
+printUsage call:[printCommands,printLinkOptions,printMediaOptions] noreturn:[printMediaOptions]
+parseOptions call:[applyOption,empty,exit,getopt_long,printUsage,puts,setLogLevel] noreturn:[exit]

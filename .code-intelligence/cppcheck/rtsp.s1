@@ -1,0 +1,12 @@
+failed
+iequals call:[toLower] noreturn:[toLower]
+header call:[iequals]
+set call:[emplace_back,iequals] noreturn:[emplace_back]
+cseq call:[header,parseDec,trim]
+serialize call:[empty,header,size,to_string]
+reasonPhrase
+makeRequest
+makeResponse call:[reasonPhrase,set,to_string]
+feed
+parseHead call:[emplace_back,empty,find,parseDec,size,split,startsWith,substr,trim] noreturn:[emplace_back,trim]
+next call:[erase,find,header,parseDec,parseHead,size,substr,trim]

@@ -1,0 +1,10 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+failed
+failed
+finished
+finish
+state
+runSourceSession call:[extra,failed,get,gstFactoryExists,gstInit,healthy,localAddress,media,now,pumpSession,sendAll,session,start,tick] noreturn:[extra,sendAll]

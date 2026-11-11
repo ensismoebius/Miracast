@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/commands.hpp:12:5" my-argnr="1" my-argname="opts" file="src/cmd_scan.cpp" line="50" col="7" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/commands.hpp</filename>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/group.hpp</filename>
+    <filename>src/mdns_discovery.hpp</filename>
+    <filename>src/options.hpp</filename>
+    <filename>src/p2p_link.hpp</filename>
+    <filename>src/peer.hpp</filename>
+    <filename>src/sink_info.hpp</filename>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+    <filename>src/wpa_ctrl.hpp</filename>
+  </includes>
+  <hash>7435913667003175702</hash>
+</analyzerinfo>

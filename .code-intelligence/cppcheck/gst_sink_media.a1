@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/gst_sink_media.cpp:36:13" call-funcname="padMediaType" call-argnr="1" file="src/gst_sink_media.cpp" line="87" col="27" my-id="src/gst_sink_media.hpp:29:7" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/gst_sink_media.cpp:19:6" my-argnr="3" my-argname="desc" file="src/gst_sink_media.cpp" line="22" col="54" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/gst_sink_media.hpp</filename>
+    <filename>src/gst_util.hpp</filename>
+    <filename>src/sink_media.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>8133487433625933792</hash>
+</analyzerinfo>

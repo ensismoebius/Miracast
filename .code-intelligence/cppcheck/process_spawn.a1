@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/process_spawn.hpp:13:7" my-argnr="1" my-argname="argv" file="src/process_spawn.cpp" line="14" col="6" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/process_spawn.hpp</filename>
+  </includes>
+  <hash>10660711115923561436</hash>
+</analyzerinfo>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <includes>
+    <filename>src/capture_settings.hpp</filename>
+    <filename>src/stream_config.hpp</filename>
+  </includes>
+  <hash>13534226510210948164</hash>
+</analyzerinfo>

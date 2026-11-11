@@ -1,0 +1,23 @@
+failed
+failed
+finished
+finish
+state
+videoCapability call:[progressiveCeaMask,push_back,serialize] noreturn:[push_back,serialize]
+videoSelectionValid call:[parse,progressiveCeaMask,size]
+SinkSession
+SinkSession call:[closeMedia] noreturn:[closeMedia]
+closeMedia call:[stop] noreturn:[stop]
+abort call:[closeMedia,finish] noreturn:[finish]
+handleRequest call:[onGetParameter,onOptions,onSetParameter,onTeardown,reply] noreturn:[onGetParameter,onOptions,onSetParameter,onTeardown,reply]
+onOptions call:[cseq,logf,makeRequest,makeResponse,sendRequest,sendResponse,set,string] noreturn:[logf,sendRequest]
+capability call:[serialize,videoCapability] noreturn:[serialize,videoCapability]
+onGetParameter call:[capability,cseq,empty,makeResponse,parseParamNames,sendResponse,set] noreturn:[sendResponse,set]
+applySelection call:[findParam,parse,split,startsWith,trim,videoSelectionValid]
+onSetParameter call:[applySelection,findParam,logf,onTrigger,parseParams,reply,trim] noreturn:[reply]
+onTrigger call:[c_str,logf,sendPlay,sendSetup,teardown] noreturn:[logf,sendPlay,sendSetup,teardown]
+sendSetup call:[empty,fail,header,makeRequest,sendPlay,sendRequest,sessionId,set,start,to_string] noreturn:[sendPlay,sendRequest]
+sendPlay call:[fail,logf,makeRequest,sendRequest,set] noreturn:[logf,sendRequest]
+onTeardown call:[closeMedia,finish,reply] noreturn:[finish]
+teardown call:[abort,empty,makeRequest,sendRequest,set] noreturn:[abort,sendRequest]
+requestIdr call:[makeRequest,sendRequest,set] noreturn:[sendRequest]

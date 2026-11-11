@@ -1,0 +1,9 @@
+callForPath call:[G_VARIANT_TYPE,g_dbus_connection_call_sync,g_error_free,g_variant_get,g_variant_unref,logf]
+callVoid call:[g_dbus_connection_call_sync,g_error_free,g_variant_unref,logf]
+streamAddedTrampoline call:[g_variant_get,onStreamAdded] noreturn:[onStreamAdded]
+ScreenCapture call:[stop] noreturn:[stop]
+onStreamAdded
+openStream call:[c_str,callForPath,g_variant_new_parsed] noreturn:[callForPath]
+waitForNode call:[g_main_context_iteration,milliseconds,sleep_for] noreturn:[sleep_for]
+start call:[c_str,callVoid,g_bus_get_sync,g_dbus_connection_signal_subscribe,g_error_free,logf,openStream,stop,waitForNode] noreturn:[waitForNode]
+stop call:[c_str,callVoid,clear,empty,g_dbus_connection_signal_unsubscribe,g_object_unref,reset] noreturn:[callVoid,g_dbus_connection_signal_unsubscribe,reset]

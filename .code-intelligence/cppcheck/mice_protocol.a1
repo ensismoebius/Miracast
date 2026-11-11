@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/mice_protocol.cpp:26:6" call-funcname="putTlv" call-argnr="2" file="src/mice_protocol.cpp" line="106" col="8" call-argexpr="kTlvFriendlyName" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/mice_protocol.cpp:26:6" call-funcname="putTlv" call-argnr="2" file="src/mice_protocol.cpp" line="116" col="8" call-argexpr="kTlvFriendlyName" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/mice_protocol.hpp:22:13" my-argnr="1" my-argname="name" file="src/mice_protocol.cpp" line="106" col="41" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.hpp:22:13" my-argnr="3" my-argname="sourceId" file="src/mice_protocol.cpp" line="108" col="29" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.hpp:26:13" my-argnr="1" my-argname="name" file="src/mice_protocol.cpp" line="116" col="41" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.hpp:26:13" my-argnr="2" my-argname="sourceId" file="src/mice_protocol.cpp" line="117" col="29" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.hpp:32:28" my-argnr="1" my-argname="buf" file="src/mice_protocol.cpp" line="134" col="20" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/mice_protocol.cpp:19:6" my-argnr="1" my-argname="out" file="src/mice_protocol.cpp" line="21" col="2" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.cpp:26:6" my-argnr="1" my-argname="out" file="src/mice_protocol.cpp" line="28" col="2" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.cpp:26:6" my-argnr="3" my-argname="value" file="src/mice_protocol.cpp" line="29" col="37" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.cpp:34:13" my-argnr="2" my-argname="tlvs" file="src/mice_protocol.cpp" line="37" col="51" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.cpp:44:6" my-argnr="1" my-argname="out" file="src/mice_protocol.cpp" line="46" col="2" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.hpp:16:13" my-argnr="1" my-argname="utf8" file="src/mice_protocol.cpp" line="72" col="29" value="0"/>
+    <unsafe-usage my-id="src/mice_protocol.hpp:29:8" my-argnr="1" my-argname="buf" file="src/mice_protocol.cpp" line="124" col="6" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/mice_command.hpp</filename>
+    <filename>src/mice_protocol.hpp</filename>
+  </includes>
+  <hash>15043041047972235510</hash>
+</analyzerinfo>

@@ -1,0 +1,4 @@
+encoderElement call:[empty,to_string]
+bufferQueue call:[to_string]
+videoChain call:[bufferQueue,encoderElement,to_string]
+audioChain call:[empty]

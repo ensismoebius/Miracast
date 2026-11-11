@@ -1,0 +1,9 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+failed
+failed
+finished
+finish
+pumpSession call:[abort,clear,extra,finished,get,load,logf,onData,recvSome] noreturn:[onData]

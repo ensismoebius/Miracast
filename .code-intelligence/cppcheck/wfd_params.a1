@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/wfd_params.hpp:22:11" my-argnr="1" my-argname="body" file="src/wfd_params.cpp" line="17" col="31" value="0"/>
+    <unsafe-usage my-id="src/wfd_params.hpp:28:26" my-argnr="1" my-argname="body" file="src/wfd_params.cpp" line="40" col="31" value="0"/>
+    <unsafe-usage my-id="src/wfd_params.hpp:37:25" my-argnr="1" my-argname="hex" file="src/wfd_params.cpp" line="68" col="40" value="0"/>
+    <unsafe-usage my-id="src/wfd_params.hpp:46:13" my-argnr="1" my-argname="header" file="src/wfd_params.cpp" line="98" col="20" value="0"/>
+    <unsafe-usage my-id="src/wfd_params.hpp:49:25" my-argnr="1" my-argname="transport" file="src/wfd_params.cpp" line="104" col="32" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/wfd_params.hpp:25:28" my-argnr="1" my-argname="params" file="src/wfd_params.cpp" line="29" col="34" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/util.hpp</filename>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+  </includes>
+  <hash>578750356965273478</hash>
+</analyzerinfo>

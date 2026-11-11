@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/cli.cpp:162:6" call-funcname="printCommands" call-argnr="1" file="src/cli.cpp" line="223" col="2" my-id="src/cli.hpp:12:6" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/cli.cpp:162:6" my-argnr="1" my-argname="out" file="src/cli.cpp" line="170" col="3" value="0"/>
+    <unsafe-usage my-id="src/cli.cpp:174:6" my-argnr="1" my-argname="out" file="src/cli.cpp" line="187" col="3" value="0"/>
+    <unsafe-usage my-id="src/cli.cpp:191:6" my-argnr="1" my-argname="out" file="src/cli.cpp" line="216" col="3" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/cli.cpp:162:6" my-argnr="1" my-argname="out" file="src/cli.cpp" line="170" col="3" value="0"/>
+    <unsafe-usage my-id="src/cli.cpp:174:6" my-argnr="1" my-argname="out" file="src/cli.cpp" line="187" col="3" value="0"/>
+    <unsafe-usage my-id="src/cli.cpp:191:6" my-argnr="1" my-argname="out" file="src/cli.cpp" line="216" col="3" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/cli.hpp</filename>
+    <filename>src/options.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>12664189713051847843</hash>
+</analyzerinfo>

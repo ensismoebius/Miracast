@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/audio_codec.hpp:20:33" my-argnr="1" my-argname="value" file="src/audio_codec.cpp" line="26" col="19" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/audio_codec.hpp:18:21" my-argnr="1" my-argname="codecs" file="src/audio_codec.cpp" line="12" col="6" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/audio_codec.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>14577291155305740747</hash>
+</analyzerinfo>

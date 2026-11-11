@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="tests/check.hpp:11:13" call-funcname="reportCheck" call-argnr="1" file="tests/test_main.cpp" line="31" col="2" call-argexpr="msg&amp;&amp;msg-&gt;isRequest&amp;&amp;msg-&gt;method==&quot;SET_PARAMETER&quot;&amp;&amp;msg-&gt;cseq()==7" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0" warning="true">
+  <path file="tests/test_main.cpp" line="32" col="2" info="Assuming that condition &apos;msg&apos; is not redundant"/>
+</function-call><function-call call-id="tests/check.hpp:11:13" call-funcname="reportCheck" call-argnr="1" file="tests/test_main.cpp" line="46" col="2" call-argexpr="formats&amp;&amp;formats-&gt;codecs.size()==1&amp;&amp;formats-&gt;codecs[0].profile==2" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0" warning="true">
+  <path file="tests/test_main.cpp" line="47" col="2" info="Assuming that condition &apos;formats&apos; is not redundant"/>
+</function-call><function-call call-id="/home/ensismoebius/Repos/Miracast/src/wfd_params.hpp:37:25" call-funcname="parseWfdDevInfo" call-argnr="2" file="tests/test_main.cpp" line="61" col="35" call-argexpr="&amp;port" call-argvaluetype="7" call-argvalue="2" call-argvalue-ufr="0"/><function-call call-id="tests/check.hpp:11:13" call-funcname="reportCheck" call-argnr="1" file="tests/test_main.cpp" line="62" col="2" call-argexpr="info&amp;&amp;*info==0x0111&amp;&amp;port==7236" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0" warning="true">
+  <path file="tests/test_main.cpp" line="63" col="2" info="Assuming that condition &apos;info&apos; is not redundant"/>
+</function-call><function-call call-id="/home/ensismoebius/Repos/Miracast/src/selection.hpp:26:27" call-funcname="selectAudio" call-argnr="2" file="tests/test_main.cpp" line="154" col="2" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Class">
+<class name="FakeSinkMedia" file="tests/fake_sink_media.hpp" configuration="" line="7" col="1" hash="17759675706373766408"/>
+<class name="FakeSourceMedia" file="tests/fake_source_media.hpp" configuration="" line="7" col="1" hash="7643601491681076184"/>
+  </FileInfo>
+  <includes>
+    <filename>/home/ensismoebius/Repos/Miracast/src/audio_codec.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/cea_mode.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/client_ports.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/dns_packet.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/h264_codec.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/message.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/mice_command.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/mice_protocol.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/parser.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/rtsp_peer.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/selection.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/sink_config.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/sink_info.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/sink_media.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/sink_session.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/source_config.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/source_media.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/source_session.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/stream_config.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/video_formats.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/wfd_device_type.hpp</filename>
+    <filename>/home/ensismoebius/Repos/Miracast/src/wfd_params.hpp</filename>
+    <filename>tests/check.hpp</filename>
+    <filename>tests/fake_sink_media.hpp</filename>
+    <filename>tests/fake_source_media.hpp</filename>
+  </includes>
+  <hash>7693148781328753634</hash>
+</analyzerinfo>

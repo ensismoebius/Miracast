@@ -1,0 +1,5 @@
+running
+dhcpArgv
+ownerAddress
+setupOwner call:[c_str,commandExists,logf,ownerAddress,runCommand,spawn] noreturn:[spawn]
+setupClient call:[commandExists,dhcpArgv,logf,runCommand]

@@ -1,0 +1,8 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+openSocket call:[get,setsockopt,sizeof,sock,socket,valid] noreturn:[setsockopt]
+sendQuery call:[buildPtrQuery,data,get,htons,inet_pton,sendto,size,sizeof] noreturn:[sendto]
+receiveSink call:[get,inet_ntop,parseDisplayResponse,poll,recvfrom,sizeof,string]
+discoverSinks call:[any_of,begin,end,load,milliseconds,now,openSocket,push_back,receiveSink,sendQuery,valid] noreturn:[milliseconds,push_back]

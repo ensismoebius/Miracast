@@ -1,0 +1,16 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+makeAddr call:[c_str,htons,inet_pton,memset,sizeof]
+waitFd call:[poll,while] noreturn:[poll]
+setNoDelay call:[setsockopt,sizeof] noreturn:[setsockopt]
+addrText call:[inet_ntop,sizeof]
+tcpListen call:[FileDescriptor,bind,c_str,get,listen,logf,lsn,makeAddr,setsockopt,sizeof,socket,strerror,valid] noreturn:[FileDescriptor]
+tcpAccept call:[FileDescriptor,accept4,addrText,conn,get,setNoDelay,sizeof,valid,waitFd] noreturn:[FileDescriptor,addrText]
+tcpConnect call:[FileDescriptor,conn,connect,fcntl,get,getsockopt,makeAddr,setNoDelay,sizeof,socket,valid,waitFd] noreturn:[FileDescriptor]
+localAddress call:[addrText,getsockname,sizeof] noreturn:[addrText]
+sendAll call:[data,send,size]
+recvSome call:[append,recv,sizeof,waitFd,while] noreturn:[recv]
+ifaceAddress call:[addrText,freeifaddrs,getifaddrs] noreturn:[addrText]
+defaultGateway call:[addrText,fields,getline,parseHex,table] noreturn:[addrText]

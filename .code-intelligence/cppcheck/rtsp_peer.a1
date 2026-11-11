@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="1" file="src/rtsp_peer.cpp" line="19" col="6" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/message.hpp:36:9" call-funcname="makeResponse" call-argnr="2" file="src/rtsp_peer.cpp" line="70" col="29" call-argexpr="0" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:19:6" call-funcname="logf" call-argnr="3" file="src/rtsp_peer.cpp" line="19" col="2" my-id="src/rtsp_peer.hpp:53:7" my-argnr="1"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/rtsp_peer.hpp:51:7" my-argnr="1" my-argname="req" file="src/rtsp_peer.cpp" line="44" col="36" value="0"/>
+    <unsafe-usage my-id="src/rtsp_peer.hpp:64:7" my-argnr="1" my-argname="msg" file="src/rtsp_peer.cpp" line="66" col="6" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/message.hpp</filename>
+    <filename>src/parser.hpp</filename>
+    <filename>src/rtsp_peer.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>447055964931636705</hash>
+</analyzerinfo>

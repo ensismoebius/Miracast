@@ -1,0 +1,7 @@
+FileDescriptor
+FileDescriptor
+get
+valid
+acceptSink call:[get,load,tcpAccept,valid] noreturn:[tcpAccept]
+miceAlive call:[get,miceCommandOf,recvSome]
+runCastMice call:[acceptSink,c_str,empty,get,logf,miceAlive,miceRandomSourceId,miceSourceReady,miceStopProjection,runSourceSession,sendAll,tcpConnect,tcpListen,valid] noreturn:[miceAlive]

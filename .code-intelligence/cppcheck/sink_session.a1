@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="ctu">
+<function-call call-id="src/rtsp_peer.hpp:47:7" call-funcname="sendRequest" call-argnr="2" file="src/sink_session.cpp" line="257" col="13" call-argexpr="nullptr" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/sink_session.cpp:35:6" my-argnr="1" my-argname="value" file="src/sink_session.cpp" line="37" col="43" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/sink_session.hpp:39:7" my-argnr="1" my-argname="req" file="src/sink_session.cpp" line="79" col="6" value="0"/>
+    <unsafe-usage my-id="src/sink_session.hpp:43:7" my-argnr="1" my-argname="req" file="src/sink_session.cpp" line="94" col="35" value="0"/>
+    <unsafe-usage my-id="src/sink_session.hpp:45:7" my-argnr="1" my-argname="req" file="src/sink_session.cpp" line="125" col="35" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/cea_mode.hpp</filename>
+    <filename>src/client_ports.hpp</filename>
+    <filename>src/h264_codec.hpp</filename>
+    <filename>src/message.hpp</filename>
+    <filename>src/parser.hpp</filename>
+    <filename>src/rtsp_peer.hpp</filename>
+    <filename>src/sink_config.hpp</filename>
+    <filename>src/sink_media.hpp</filename>
+    <filename>src/sink_session.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/video_formats.hpp</filename>
+    <filename>src/wfd_device_type.hpp</filename>
+    <filename>src/wfd_params.hpp</filename>
+  </includes>
+  <hash>11359390298691058601</hash>
+</analyzerinfo>

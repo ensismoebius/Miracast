@@ -1,0 +1,38 @@
+.\" SPDX-License-Identifier: GPL-2.0-or-later
+.TH MIRACAST 1 "2026" "miracast 1.0.0" "User Commands"
+.SH NAME
+miracast \- Wi-Fi Display (Miracast) source and sink for Linux
+.SH SYNOPSIS
+.B miracast
+.I command
+[\fIoptions\fR]
+.SH DESCRIPTION
+Implements the Wi-Fi Display RTSP control protocol (messages M1\(emM7, keep-alive,
+IDR request, teardown), Wi-Fi Direct group formation through
+.BR wpa_supplicant (8),
+and an H.264/MPEG-TS/RTP media path through GStreamer.
+.SH COMMANDS
+.TP
+.B scan
+List Wi-Fi Display devices found nearby.
+.TP
+.BI cast " name|MAC"
+Stream the screen to a sink.
+.TP
+.B sink
+Receive and display a stream.
+.SH OPTIONS
+See
+.B miracast --help.
+.SH REQUIREMENTS
+Root (or CAP_NET_ADMIN) for group addressing; wpa_supplicant with P2P enabled
+and a P2P-capable driver; dnsmasq (sink as group owner); a DHCP client;
+GStreamer base, good, bad, ugly and libav plugins.
+.SH EXIT STATUS
+Uses
+.BR sysexits.h (3)
+values: 0 success, 64 usage, 69 service unavailable, 70 protocol error,
+71 OS error, 75 temporary failure, 68 sink not found.
+.SH SEE ALSO
+.BR wpa_supplicant (8),
+.BR gst-launch-1.0 (1)

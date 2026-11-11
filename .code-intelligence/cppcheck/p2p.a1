@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+        <error id="functionStatic" severity="style" msg="The member function &apos;mc::P2pLink::collectPeer&apos; can be static." verbose="The member function &apos;mc::P2pLink::collectPeer&apos; can be static." cwe="398" hash="13338809171703546729" file0="src/p2p.cpp">
+            <location file="src/p2p.cpp" line="73" column="15"/>
+            <location file="src/p2p.hpp" line="41" column="7"/>
+            <symbol>mc::P2pLink::collectPeer</symbol>
+        </error>
+        <error id="functionStatic" severity="style" msg="The member function &apos;mc::GroupNetwork::setupClient&apos; can be static." verbose="The member function &apos;mc::GroupNetwork::setupClient&apos; can be static." cwe="398" hash="14872065473695392774" file0="src/p2p.cpp">
+            <location file="src/p2p.cpp" line="185" column="20"/>
+            <location file="src/p2p.hpp" line="52" column="7"/>
+            <symbol>mc::GroupNetwork::setupClient</symbol>
+        </error>
+        <error id="functionStatic" severity="style" msg="The member function &apos;mc::GroupNetwork::ownerAddress&apos; can be static." verbose="The member function &apos;mc::GroupNetwork::ownerAddress&apos; can be static." cwe="398" hash="12284148604038681148" file0="src/p2p.cpp">
+            <location file="src/p2p.hpp" line="53" column="14"/>
+            <symbol>mc::GroupNetwork::ownerAddress</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" hash="16207866168464265884" file0="src/p2p.cpp">
+            <location file="src/p2p.cpp" line="39" column="4"/>
+        </error>
+  <FileInfo check="ctu">
+<function-call call-id="src/wfd.hpp:85:25" call-funcname="parseWfdDevInfo" call-argnr="2" file="src/p2p.cpp" line="91" col="35" call-argexpr="&amp;port" call-argvaluetype="7" call-argvalue="2" call-argvalue-ufr="0"/><function-call call-id="src/p2p.hpp:42:23" call-funcname="waitGroup" call-argnr="3" file="src/p2p.cpp" line="152" col="18" call-argexpr="false" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:15:6" call-funcname="logf" call-argnr="1" file="src/p2p.cpp" line="170" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:15:6" call-funcname="logf" call-argnr="1" file="src/p2p.cpp" line="176" col="7" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/><function-call call-id="src/util.hpp:15:6" call-funcname="logf" call-argnr="1" file="src/p2p.cpp" line="200" col="6" call-argexpr="LogLevel::Error" call-argvaluetype="0" call-argvalue="0" call-argvalue-ufr="0"/>  </FileInfo>
+  <FileInfo check="Null pointer">
+    <unsafe-usage my-id="src/p2p.hpp:32:7" my-argnr="1" my-argname="ctrlDir" file="src/p2p.cpp" line="53" col="20" value="0"/>
+    <unsafe-usage my-id="src/p2p.hpp:32:7" my-argnr="2" my-argname="iface" file="src/p2p.cpp" line="53" col="29" value="0"/>
+    <unsafe-usage my-id="src/p2p.hpp:41:7" my-argnr="1" my-argname="event" file="src/p2p.cpp" line="75" col="18" value="0"/>
+  </FileInfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/p2p.cpp:16:13" my-argnr="1" my-argname="line" file="src/p2p.cpp" line="19" col="15" value="0"/>
+    <unsafe-usage my-id="src/p2p.cpp:45:6" my-argnr="2" my-argname="stop" file="src/p2p.cpp" line="47" col="9" value="0"/>
+    <unsafe-usage my-id="src/p2p.hpp:35:23" my-argnr="1" my-argname="peer" file="src/p2p.cpp" line="150" col="38" value="0"/>
+    <unsafe-usage my-id="src/p2p.hpp:38:7" my-argnr="1" my-argname="g" file="src/p2p.cpp" line="163" col="38" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/net.hpp</filename>
+    <filename>src/p2p.hpp</filename>
+    <filename>src/process.hpp</filename>
+    <filename>src/util.hpp</filename>
+    <filename>src/wfd.hpp</filename>
+    <filename>src/wpa_ctrl.hpp</filename>
+  </includes>
+  <hash>3754707377518129728</hash>
+</analyzerinfo>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/util.hpp:22:13" my-argnr="1" my-argname="text" file="src/util.cpp" line="78" col="38" value="0"/>
+    <unsafe-usage my-id="src/util.hpp:34:6" my-argnr="1" my-argname="text" file="src/util.cpp" line="118" col="9" value="0"/>
+    <unsafe-usage my-id="src/util.hpp:34:6" my-argnr="2" my-argname="prefix" file="src/util.cpp" line="118" col="24" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>13969314540587198628</hash>
+</analyzerinfo>

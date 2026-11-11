@@ -1,0 +1,12 @@
+putBe16 call:[push_back] noreturn:[push_back]
+putTlv call:[push_back,putBe16,size]
+frame call:[push_back,putBe16,size]
+putUnit call:[push_back] noreturn:[push_back]
+continuationBytes
+leadBits
+utf16le call:[continuationBytes,leadBits,putUnit,size] noreturn:[putUnit]
+miceRandomSourceId call:[device,push_back] noreturn:[push_back]
+miceSourceReady call:[frame,putBe16,putTlv,utf16le] noreturn:[frame]
+miceStopProjection call:[frame,putTlv,utf16le] noreturn:[frame]
+miceFrameSize call:[size]
+miceCommandOf call:[miceFrameSize]

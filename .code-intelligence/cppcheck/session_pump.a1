@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<analyzerinfo>
+  <FileInfo check="Uninitialized variables">
+    <unsafe-usage my-id="src/session_pump.hpp:14:6" my-argnr="2" my-argname="session" file="src/session_pump.cpp" line="17" col="10" value="0"/>
+  </FileInfo>
+  <includes>
+    <filename>src/file_descriptor.hpp</filename>
+    <filename>src/message.hpp</filename>
+    <filename>src/net.hpp</filename>
+    <filename>src/parser.hpp</filename>
+    <filename>src/rtsp_peer.hpp</filename>
+    <filename>src/session_pump.hpp</filename>
+    <filename>src/util.hpp</filename>
+  </includes>
+  <hash>1499706405305586972</hash>
+</analyzerinfo>
