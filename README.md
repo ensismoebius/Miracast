@@ -1,5 +1,7 @@
 # miracast
 
+[English](README.en.md) | **Português**
+
 Cliente e receptor **Miracast (Wi-Fi Display)** em linha de comando para Linux.
 
 - **`cast`** envia a tela e o áudio do computador para uma TV ou outro receptor Miracast.
@@ -68,7 +70,7 @@ sudo cmake --install build                        # /usr/local
 sudo cmake --install build --prefix /usr          # ou outro prefixo
 ```
 
-Instala o binário em `bin/`, a man page em `share/man/man1/`, a licença e este README em `share/doc/`, e a unit do systemd `miracast-sink.service` em `lib/systemd/system/`. Para desinstalar, apague os arquivos listados em `build/install_manifest.txt`.
+Instala o binário em `bin/`, a man page em `share/man/man1/`, a licença e os READMEs em `share/doc/`, e a unit do systemd `miracast-sink.service` em `lib/systemd/system/`. Para desinstalar, apague os arquivos listados em `build/install_manifest.txt`.
 
 Depois de instalar, leia a documentação completa com `man miracast`.
 
@@ -93,6 +95,8 @@ sudo dnf install dist/miracast-1.0.0-*.x86_64.rpm  # Fedora
 ```
 
 No Fedora, o encoder `x264enc` vem do RPM Fusion (`gstreamer1-plugins-ugly`); sem ele use `--encoder vah264enc`.
+
+Pacotes prontos ficam anexados a cada [release do GitHub](https://github.com/ensismoebius/Miracast/releases).
 
 ## Uso
 

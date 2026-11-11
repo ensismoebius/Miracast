@@ -66,4 +66,4 @@ configure_file(docs/miracast-sink.service.in miracast-sink.service @ONLY)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/miracast-sink.service
         DESTINATION lib/systemd/system)
 install(FILES LICENSE DESTINATION ${CMAKE_INSTALL_DOCDIR})
-install(FILES README.md DESTINATION ${CMAKE_INSTALL_DOCDIR})
+install(FILES README.md README.en.md DESTINATION ${CMAKE_INSTALL_DOCDIR})

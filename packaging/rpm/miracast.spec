@@ -52,7 +52,7 @@ rm -rf %{buildroot}%{_docdir}/%{name}
 
 %files
 %license LICENSE
-%doc README.md
+%doc README.md README.en.md
 %{_bindir}/miracast
 %{_mandir}/man1/miracast.1*
 %{_prefix}/lib/systemd/system/miracast-sink.service
