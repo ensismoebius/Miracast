@@ -87,7 +87,7 @@ packaging/build.sh all        # todos
 Se o sistema for a própria distribuição (ou derivada), o pacote é compilado localmente; caso contrário, o script usa um contêiner Docker (`--docker` força, `--native` evita). Os arquivos de empacotamento ficam em `packaging/arch/PKGBUILD`, `packaging/debian/` e `packaging/rpm/miracast.spec`. Depois de gerar:
 
 ```sh
-sudo pacman -U dist/miracast-git-*.pkg.tar.zst    # Arch
+sudo pacman -U dist/miracast-1.0.0-*.pkg.tar.zst    # Arch
 sudo apt install ./dist/miracast_1.0.0_*_amd64.deb # Debian / Ubuntu
 sudo dnf install dist/miracast-1.0.0-*.x86_64.rpm  # Fedora
 ```

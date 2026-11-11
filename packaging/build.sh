@@ -56,14 +56,11 @@ build_arch() {
 	work=$(mktemp -d)
 	trap 'rm -rf "$work"; trap - RETURN' RETURN
 	cp "$here/arch/PKGBUILD" "$work/"
-	# makepkg builds from a git repository: snapshot the working tree into a throw-away one.
 	make_tarball "$work"
-	mkdir "$work/snapshot" && tar -xzf "$work/miracast-$version.tar.gz" -C "$work/snapshot" --strip-components=1
-	git -C "$work/snapshot" init -q -b main
-	git -C "$work/snapshot" add -A
-	git -C "$work/snapshot" -c user.name=build -c user.email=build@localhost commit -qm snapshot
-	(cd "$work" && MIRACAST_REPO="file://$work/snapshot" PKGDEST="$dist" \
-		BUILDDIR="$work/build" SRCDEST="$work/src" makepkg -fs --noconfirm)
+	# The local tarball unpacks to miracast-<version>; the release one to Miracast-<version>.
+	sed -i 's|Miracast-${pkgver}|miracast-${pkgver}|g' "$work/PKGBUILD"
+	(cd "$work" && MIRACAST_SOURCE="miracast-$version.tar.gz" MIRACAST_SHA256=SKIP \
+		PKGDEST="$dist" BUILDDIR="$work/build" SRCDEST="$work/src" makepkg -fs --noconfirm)
 }
 
 build_debian() {
