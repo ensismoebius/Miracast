@@ -52,7 +52,7 @@ sudo apt install build-essential cmake pkg-config libgstreamer1.0-dev \
 ## Compilação
 
 ```sh
-git clone <url-do-repositório> miracast
+git clone https://github.com/ensismoebius/Miracast miracast
 cd miracast
 cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j"$(nproc)"
