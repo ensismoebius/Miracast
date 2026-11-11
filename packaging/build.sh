@@ -67,7 +67,7 @@ build_arch() {
 }
 
 build_debian() {
-	local work
+	local target=$1 work
 	work=$(mktemp -d)
 	trap 'rm -rf "$work"; trap - RETURN' RETURN
 	make_tarball "$work"
@@ -78,7 +78,11 @@ build_debian() {
 		"$here/debian/changelog.in" >"$src/debian/changelog"
 	rm -f "$src/debian/changelog.in"
 	(cd "$src" && dpkg-buildpackage -us -uc -b)
-	cp "$work"/*.deb "$dist/"
+	local deb base
+	for deb in "$work"/*.deb; do
+		base=$(basename "$deb" .deb) # name_version_arch -> name_version_<distro>_arch
+		cp "$deb" "$dist/${base%_*}_${target}_${base##*_}.deb"
+	done
 }
 
 build_fedora() {
@@ -123,7 +127,7 @@ native() {
 	mkdir -p "$dist"
 	case "$1" in
 	arch) build_arch ;;
-	debian | ubuntu) build_debian ;;
+	debian | ubuntu) build_debian "$1" ;;
 	fedora) build_fedora ;;
 	esac
 }

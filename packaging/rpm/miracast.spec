@@ -47,6 +47,8 @@ without it use --encoder vah264enc or another H.264 encoder.
 
 %install
 %cmake_install
+# License and README are packaged by %license / %doc below.
+rm -rf %{buildroot}%{_docdir}/%{name}
 
 %files
 %license LICENSE

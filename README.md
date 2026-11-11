@@ -72,6 +72,28 @@ Instala o binário em `bin/`, a man page em `share/man/man1/`, a licença e este
 
 Depois de instalar, leia a documentação completa com `man miracast`.
 
+## Pacotes (Arch, Debian, Ubuntu, Fedora)
+
+O script `packaging/build.sh` gera pacotes nativos a partir da árvore de trabalho e os coloca em `dist/`:
+
+```sh
+packaging/build.sh arch       # .pkg.tar.zst
+packaging/build.sh debian     # .deb  (Debian estável)
+packaging/build.sh ubuntu     # .deb  (Ubuntu 24.04)
+packaging/build.sh fedora     # .rpm e .src.rpm
+packaging/build.sh all        # todos
+```
+
+Se o sistema for a própria distribuição (ou derivada), o pacote é compilado localmente; caso contrário, o script usa um contêiner Docker (`--docker` força, `--native` evita). Os arquivos de empacotamento ficam em `packaging/arch/PKGBUILD`, `packaging/debian/` e `packaging/rpm/miracast.spec`. Depois de gerar:
+
+```sh
+sudo pacman -U dist/miracast-git-*.pkg.tar.zst    # Arch
+sudo apt install ./dist/miracast_1.0.0_*_amd64.deb # Debian / Ubuntu
+sudo dnf install dist/miracast-1.0.0-*.x86_64.rpm  # Fedora
+```
+
+No Fedora, o encoder `x264enc` vem do RPM Fusion (`gstreamer1-plugins-ugly`); sem ele use `--encoder vah264enc`.
+
 ## Uso
 
 ### Enviar a tela para a TV (rede)
