@@ -62,5 +62,8 @@ add_test(NAME unit COMMAND mctests)
 include(GNUInstallDirs)
 install(TARGETS miracast RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 install(FILES docs/miracast.1 DESTINATION ${CMAKE_INSTALL_MANDIR}/man1)
-install(FILES docs/miracast-sink.service
+configure_file(docs/miracast-sink.service.in miracast-sink.service @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/miracast-sink.service
         DESTINATION ${CMAKE_INSTALL_LIBDIR}/systemd/system)
+install(FILES LICENSE DESTINATION ${CMAKE_INSTALL_DOCDIR})
+install(FILES README.md DESTINATION ${CMAKE_INSTALL_DOCDIR})

@@ -1,38 +1,230 @@
 .\" SPDX-License-Identifier: GPL-2.0-or-later
-.TH MIRACAST 1 "2026" "miracast 1.0.0" "User Commands"
+.TH MIRACAST 1 "November 2026" "miracast 1.0.0" "User Commands"
 .SH NAME
-miracast \- Wi-Fi Display (Miracast) source and sink for Linux
+miracast \- Miracast (Wi-Fi Display) source and sink for Linux
 .SH SYNOPSIS
-.B miracast
-.I command
+.B miracast scan
+[\fIoptions\fR]
+.br
+.B miracast cast
+[\fIname\fR|\fIIP\fR] [\fIoptions\fR]
+.br
+.B miracast sink
 [\fIoptions\fR]
 .SH DESCRIPTION
-Implements the Wi-Fi Display RTSP control protocol (messages M1\(emM7, keep-alive,
-IDR request, teardown), Wi-Fi Direct group formation through
-.BR wpa_supplicant (8),
-and an H.264/MPEG-TS/RTP media path through GStreamer.
+.B miracast
+sends the screen and the system audio of this computer to a Miracast
+receiver (typically a smart TV), or receives a Miracast stream and displays it.
+.PP
+Two transports are supported:
+.TP
+.B Miracast over Infrastructure (MS-MICE)
+The source and the sink talk over the existing IP network (Wi-Fi or
+Ethernet).
+The sink is found by mDNS (service
+.IR _display._tcp ),
+the source connects to TCP port 7250 and the sink then connects back to the
+RTSP port 7236.
+No special Wi-Fi hardware is needed, but the sink must implement MS-MICE.
+.TP
+.B Wi-Fi Direct (P2P)
+The classic Miracast transport.
+It is driven through
+.BR wpa_supplicant (8)
+and needs a Wi-Fi adapter whose driver exposes the P2P-client/P2P-GO modes
+(see
+.BR "iw phy" ).
+.PP
+In both cases the session is the Wi-Fi Display RTSP exchange (messages M1 to M7,
+keep-alive, IDR request and teardown), and the media is H.264 video (optionally
+AAC-LC audio) in an MPEG-2 transport stream carried over RTP, produced and
+consumed through GStreamer.
 .SH COMMANDS
 .TP
 .B scan
-List Wi-Fi Display devices found nearby.
+List the sinks found nearby: first those announcing themselves on the network
+by mDNS, then Wi-Fi Direct peers.
+Each line has three tab-separated fields: address, transport
+.RI ( network ,
+.IR wifi-direct-sink ,
+.IR wifi-direct-source ),
+and name.
 .TP
-.BI cast " name|MAC"
-Stream the screen to a sink.
+.BR cast " [\fIname\fR|\fIIP\fR]"
+Send the screen and audio to a sink.
+With a name, the sink is looked up by mDNS; with an IPv4 address it is used
+directly; with no argument the only sink on the network is used.
+If no sink is found on the network, Wi-Fi Direct is tried (the argument is then
+the device name or MAC address).
+Stop with
+.BR Ctrl-C .
 .TP
 .B sink
-Receive and display a stream.
-.SH OPTIONS
-See
-.B miracast --help.
+Receive a stream and display it.
+Over Wi-Fi Direct the sink waits for a source and becomes the group owner
+(serving DHCP with
+.BR dnsmasq (8)).
+With
+.B \-\-no\-p2p
+it listens on an IP address.
+.SH LINK OPTIONS
+.TP
+.BR \-i ", " \-\-interface " \fIIF\fR"
+Wireless interface that wpa_supplicant uses for Wi-Fi Direct (default
+.IR wlan0 ).
+.TP
+.BI \-\-ctrl\-dir " DIR"
+wpa_supplicant control socket directory (default
+.IR /run/wpa_supplicant ).
+.TP
+.BR \-n ", " \-\-name " \fINAME\fR"
+Device name advertised to peers (default
+.IR miracast-linux ).
+.TP
+.BR \-t ", " \-\-scan\-time " \fISEC\fR"
+Wi-Fi Direct scan duration (default 8).
+.TP
+.B \-\-mice
+(cast) Force Miracast over Infrastructure to the address given with
+.BR \-\-host .
+.TP
+.B \-\-p2p
+(cast) Skip the network discovery and use Wi-Fi Direct.
+.TP
+.B \-\-no\-p2p
+Never use Wi-Fi Direct; use an existing IP network.
+.TP
+.BI \-\-host " IP"
+(cast) Sink address, with
+.B \-\-mice
+or
+.BR \-\-no\-p2p .
+.TP
+.BI \-\-listen " IP"
+(sink) Address to bind the RTSP port to, with
+.B \-\-no\-p2p
+(default 0.0.0.0).
+.SH SOURCE OPTIONS
+.TP
+.BI \-\-output " NAME"
+Monitor to share, such as
+.IR eDP-1 .
+Default: the compositor's choice.
+.TP
+.BI \-\-capture " FRAGMENT"
+GStreamer source fragment to capture instead of the screen, for example
+.IR "pipewiresrc path=42" .
+.TP
+.B \-\-test\-pattern
+Stream a moving test pattern instead of the screen.
+.TP
+.BI \-\-max\-width " PX"
+Largest picture width to negotiate (default 1920).
+.TP
+.BI \-\-max\-fps " N"
+Highest frame rate to negotiate (default 60).
+.TP
+.BI \-\-bitrate " KBPS"
+Video bit rate in kilobits per second (default 8000).
+.TP
+.BI \-\-encoder " NAME"
+H.264 encoder element:
+.I x264enc
+(CPU, default),
+.I vah264enc
+(GPU through VA-API), or any other GStreamer H.264 encoder.
+.TP
+.BI \-\-encoder\-opts " PROPERTIES"
+Extra element properties appended to the encoder, for example
+.IR "speed-preset=veryfast" .
+.TP
+.BI \-\-buffer\-ms " N"
+Length in milliseconds of the queue between capture and encoder; 0 disables it
+(default 100).
+Smaller values lower the latency.
+.TP
+.B \-\-no\-audio
+Do not send audio.
+By default the system output is captured and sent as AAC-LC, 48\ kHz, stereo,
+when the sink supports it.
+.TP
+.BI \-\-audio\-source " FRAGMENT"
+GStreamer audio source fragment to use instead of the system output.
+.SH SINK OPTIONS
+.TP
+.BI \-\-jitter\-ms " N"
+Receive jitter buffer in milliseconds (default 40).
+.TP
+.BI \-\-video\-sink " ELEMENT"
+GStreamer video sink (default
+.IR autovideosink ).
+.TP
+.BI \-\-audio\-sink " ELEMENT"
+GStreamer audio sink (default
+.IR autoaudiosink ).
+.SH GENERAL OPTIONS
+.TP
+.BR \-v ", " \-\-verbose
+More logging; give it twice for a protocol trace.
+.TP
+.BR \-h ", " \-\-help
+Show a summary and exit.
+.TP
+.BR \-V ", " \-\-version
+Show the version and exit.
+.SH EXAMPLES
+Find sinks and cast to the only one on the network:
+.PP
+.RS
+.nf
+miracast scan --no-p2p
+miracast cast
+.fi
+.RE
+.PP
+Share one monitor with the GPU encoder at 720p30:
+.PP
+.RS
+.nf
+miracast cast la-tevezita --output eDP-1 --encoder vah264enc \e
+        --max-width 1280 --max-fps 30
+.fi
+.RE
+.PP
+Receive a stream on this machine, over the local network:
+.PP
+.RS
+.nf
+miracast sink --no-p2p --listen 0.0.0.0
+.fi
+.RE
 .SH REQUIREMENTS
-Root (or CAP_NET_ADMIN) for group addressing; wpa_supplicant with P2P enabled
-and a P2P-capable driver; dnsmasq (sink as group owner); a DHCP client;
-GStreamer base, good, bad, ugly and libav plugins.
+GStreamer base, good, bad, ugly and libav plugins, plus
+.I gst-plugin-va
+for GPU encoding and for importing the DMA-BUF frames that some compositors
+(for example niri) deliver.
+Screen capture uses the
+.I org.gnome.Mutter.ScreenCast
+D-Bus API and PipeWire.
+Wi-Fi Direct additionally needs root (or CAP_NET_ADMIN), a wpa_supplicant built
+with P2P and Wi-Fi Display support, a P2P-capable driver, a DHCP client and
+.BR dnsmasq (8).
 .SH EXIT STATUS
-Uses
-.BR sysexits.h (3)
-values: 0 success, 64 usage, 69 service unavailable, 70 protocol error,
-71 OS error, 75 temporary failure, 68 sink not found.
+The values of
+.BR sysexits.h (3):
+0 success; 64 usage error; 68 sink not found; 69 service unavailable (for
+example no P2P support, or the sink refuses the connection); 70 protocol
+error; 71 operating-system error; 74 I/O error; 75 temporary failure.
 .SH SEE ALSO
 .BR wpa_supplicant (8),
-.BR gst-launch-1.0 (1)
+.BR gst-launch-1.0 (1),
+.BR iw (8),
+.BR dnsmasq (8)
+.PP
+Wi-Fi Display Technical Specification v2.1 (Wi-Fi Alliance) and
+[MS-MICE]: Miracast over Infrastructure Connection Establishment Protocol
+(Microsoft).
+.SH BUGS
+Stream encryption (HDCP, DTLS) and PIN entry of MS-MICE are not implemented.
+The implementation follows the public specifications and has not been certified
+by the Wi-Fi Alliance.

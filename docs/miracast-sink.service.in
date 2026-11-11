@@ -5,7 +5,7 @@ After=wpa_supplicant.service
 Wants=wpa_supplicant.service
 
 [Service]
-ExecStart=/usr/bin/miracast sink --interface wlan0
+ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/miracast sink --interface wlan0
 Restart=on-failure
 NoNewPrivileges=yes
 ProtectHome=read-only
