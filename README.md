@@ -1,4 +1,4 @@
-# miracast
+# Miracast for Linux
 
 [English](README.en.md) | **Português**
 
