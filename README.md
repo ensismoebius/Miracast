@@ -147,12 +147,45 @@ Segue o `sysexits.h`: `0` sucesso, `64` uso incorreto, `68` receptor não encont
 
 ## Como funciona
 
+```mermaid
+flowchart LR
+    subgraph Fonte["Computador (cast)"]
+        direction TB
+        Tela["Tela<br/>(PipeWire)"] --> H264["Encoder H.264<br/>x264enc / vah264enc"]
+        Audio["Áudio do sistema<br/>(PipeWire)"] --> AAC["AAC-LC<br/>48 kHz estéreo"]
+        H264 --> TS["MPEG-TS"]
+        AAC --> TS
+        TS --> RTP["RTP / UDP"]
+    end
+    subgraph Receptor["TV ou outro receptor"]
+        direction TB
+        Dec["Decodificação<br/>e exibição"]
+    end
+    Fonte -- "RTSP (M1..M7)" --> Receptor
+    RTP -- "vídeo + áudio" --> Dec
 ```
-                 RTSP (M1..M7) ─────────────────────────────┐
-   cast ── MS-MICE (TCP 7250) / Wi-Fi Direct ──► receptor     │
-   │                                                           │
-   └─ tela (PipeWire) ─► H.264 ─┐                              │
-      áudio (PipeWire) ─► AAC ──┴─► MPEG-TS ─► RTP/UDP ───────┘
+
+Sequência de uma sessão pela rede (MS-MICE); no Wi-Fi Direct não há mDNS nem MS-MICE: a fonte abre direto a conexão RTSP com o receptor e o restante da sessão é igual:
+
+```mermaid
+sequenceDiagram
+    participant F as Fonte (cast)
+    participant R as Receptor (TV)
+    F->>R: mDNS _display._tcp (descoberta)
+    R-->>F: nome e endereço
+    F->>R: TCP 7250 + SOURCE_READY (MS-MICE)
+    R->>F: conecta na TCP 7236 (RTSP)
+    F->>R: M1 OPTIONS
+    R->>F: M2 OPTIONS
+    F->>R: M3 GET_PARAMETER (capacidades)
+    R-->>F: vídeo, áudio, portas RTP
+    F->>R: M4 SET_PARAMETER (formato escolhido)
+    F->>R: M5 trigger SETUP
+    R->>F: M6 SETUP
+    R->>F: M7 PLAY
+    F-)R: RTP/UDP: H.264 + AAC em MPEG-TS
+    F->>R: keep-alive (GET_PARAMETER)
+    F->>R: STOP_PROJECTION (ao encerrar)
 ```
 
 - `src/rtsp_peer`, `sink_session`, `source_session`: máquinas de estado do protocolo, independentes de rede e de mídia (por isso testáveis em memória).
